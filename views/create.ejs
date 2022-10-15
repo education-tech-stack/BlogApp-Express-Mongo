@@ -45,11 +45,15 @@
                             </div>
                         </div>
                         <div class="form-floating">
-                            <textarea class="form-control" id="body" placeholder="Enter your body here..."
-                                      style="height: 12rem" data-sb-validations="required" name="body"></textarea>
-                            <label for="body">Body</label>
-                            <div class="invalid-feedback" data-sb-feedback="body:required">Body is required.
-                            </div>
+                            <label>Description</label>
+                            <textarea name="body" id="body"></textarea>
+                            <script>
+                                $('#body').summernote({
+                                    placeholder: 'Hello bootstrap 4',
+                                    tabsize: 2,
+                                    height: 200
+                                })
+                            </script>
                         </div>
                         <br/>
                         <!-- Submit success message-->
