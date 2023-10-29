@@ -4,9 +4,9 @@ const bodyParser = require('body-parser')
 const fileUpload = require('express-fileupload')
 const expressSession = require('express-session')
 const flash = require('connect-flash')
+require("dotenv").config()
 
-const uri = "mongodb+srv://database:extensioN%4012tech@cluster0.23fwngm.mongodb.net/blog_app?retryWrites=true&w=majority";
-mongoose.connect(uri, { useNewUrlParser: true})
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true})
 
 const app = new express()
 const ejs = require('ejs')
